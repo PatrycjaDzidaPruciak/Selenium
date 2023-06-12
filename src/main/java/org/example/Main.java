@@ -1,5 +1,6 @@
 package org.example;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -10,8 +11,10 @@ public class Main {
         ChromeOptions ops = new ChromeOptions();
         ops.addArguments("--remote-allow-origins=*");
         WebDriver driver = new ChromeDriver(ops);
-        driver.get("http://www.google.pl");
+        driver.get("https://www.w3schools.com/xml/ajax_examples.asp");
         driver.manage().window().maximize();
+        //*[@id="accept-choices"]
+        driver.findElement(By.xpath("//*[@id=\"accept-choices\"]")).click();
     }
 }
 
