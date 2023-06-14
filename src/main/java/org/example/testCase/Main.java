@@ -29,6 +29,7 @@ public class Main {
 
         loginpage.enterPassword("Password@123");
 
+        loginpage.clickLogin();
 
     }
 }
